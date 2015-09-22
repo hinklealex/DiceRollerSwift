@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Notification - alexhinkle WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>alexhinkle WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>alexhinkle.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>02BD8F731BB2084500637DED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>02BD8F871BB2084500637DED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>02BD8F921BB2084500637DED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>02BD8F9B1BB2084500637DED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

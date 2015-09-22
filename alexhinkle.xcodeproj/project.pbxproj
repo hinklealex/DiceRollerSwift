@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02BD8F781BB2084500637DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD8F771BB2084500637DED /* AppDelegate.swift */; };
+		02BD8F7A1BB2084500637DED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD8F791BB2084500637DED /* ViewController.swift */; };
+		02BD8F7D1BB2084500637DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BD8F7B1BB2084500637DED /* Main.storyboard */; };
+		02BD8F7F1BB2084500637DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BD8F7E1BB2084500637DED /* Assets.xcassets */; };
+		02BD8F821BB2084500637DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BD8F801BB2084500637DED /* LaunchScreen.storyboard */; };
+		02BD8F8D1BB2084500637DED /* alexhinkleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD8F8C1BB2084500637DED /* alexhinkleTests.swift */; };
+		02BD8F981BB2084500637DED /* alexhinkleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD8F971BB2084500637DED /* alexhinkleUITests.swift */; };
+		02BD8F9D1BB2084500637DED /* alexhinkle WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 02BD8F9C1BB2084500637DED /* alexhinkle WatchKit App.app */; };
+		02BD8FA31BB2084500637DED /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BD8FA11BB2084500637DED /* Interface.storyboard */; };
+		02BD8FA51BB2084500637DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BD8FA41BB2084500637DED /* Assets.xcassets */; };
+		02BD8FAC1BB2084500637DED /* alexhinkle WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02BD8FAB1BB2084500637DED /* alexhinkle WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		02BD8FB31BB2084500637DED /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD8FB21BB2084500637DED /* InterfaceController.swift */; };
+		02BD8FB51BB2084500637DED /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD8FB41BB2084500637DED /* ExtensionDelegate.swift */; };
+		02BD8FB71BB2084500637DED /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD8FB61BB2084500637DED /* NotificationController.swift */; };
+		02BD8FB91BB2084500637DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BD8FB81BB2084500637DED /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02BD8F891BB2084500637DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02BD8F6C1BB2084500637DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02BD8F731BB2084500637DED;
+			remoteInfo = alexhinkle;
+		};
+		02BD8F941BB2084500637DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02BD8F6C1BB2084500637DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02BD8F731BB2084500637DED;
+			remoteInfo = alexhinkle;
+		};
+		02BD8F9E1BB2084500637DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02BD8F6C1BB2084500637DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02BD8F9B1BB2084500637DED;
+			remoteInfo = "alexhinkle WatchKit App";
+		};
+		02BD8FAD1BB2084500637DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02BD8F6C1BB2084500637DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02BD8FAA1BB2084500637DED;
+			remoteInfo = "alexhinkle WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		02BD8FC01BB2084500637DED /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				02BD8FAC1BB2084500637DED /* alexhinkle WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8FC41BB2084500637DED /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				02BD8F9D1BB2084500637DED /* alexhinkle WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02BD8F741BB2084500637DED /* alexhinkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alexhinkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BD8F771BB2084500637DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		02BD8F791BB2084500637DED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02BD8F7C1BB2084500637DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02BD8F7E1BB2084500637DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02BD8F811BB2084500637DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02BD8F831BB2084500637DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02BD8F881BB2084500637DED /* alexhinkleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alexhinkleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BD8F8C1BB2084500637DED /* alexhinkleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alexhinkleTests.swift; sourceTree = "<group>"; };
+		02BD8F8E1BB2084500637DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02BD8F931BB2084500637DED /* alexhinkleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alexhinkleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BD8F971BB2084500637DED /* alexhinkleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alexhinkleUITests.swift; sourceTree = "<group>"; };
+		02BD8F991BB2084500637DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02BD8F9C1BB2084500637DED /* alexhinkle WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alexhinkle WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BD8FA21BB2084500637DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		02BD8FA41BB2084500637DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02BD8FA61BB2084500637DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02BD8FAB1BB2084500637DED /* alexhinkle WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "alexhinkle WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BD8FB11BB2084500637DED /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		02BD8FB21BB2084500637DED /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		02BD8FB41BB2084500637DED /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		02BD8FB61BB2084500637DED /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		02BD8FB81BB2084500637DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02BD8FBA1BB2084500637DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02BD8F711BB2084500637DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8F851BB2084500637DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8F901BB2084500637DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8FA81BB2084500637DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02BD8F6B1BB2084500637DED = {
+			isa = PBXGroup;
+			children = (
+				02BD8F761BB2084500637DED /* alexhinkle */,
+				02BD8F8B1BB2084500637DED /* alexhinkleTests */,
+				02BD8F961BB2084500637DED /* alexhinkleUITests */,
+				02BD8FA01BB2084500637DED /* alexhinkle WatchKit App */,
+				02BD8FAF1BB2084500637DED /* alexhinkle WatchKit Extension */,
+				02BD8F751BB2084500637DED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02BD8F751BB2084500637DED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02BD8F741BB2084500637DED /* alexhinkle.app */,
+				02BD8F881BB2084500637DED /* alexhinkleTests.xctest */,
+				02BD8F931BB2084500637DED /* alexhinkleUITests.xctest */,
+				02BD8F9C1BB2084500637DED /* alexhinkle WatchKit App.app */,
+				02BD8FAB1BB2084500637DED /* alexhinkle WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02BD8F761BB2084500637DED /* alexhinkle */ = {
+			isa = PBXGroup;
+			children = (
+				02BD8F771BB2084500637DED /* AppDelegate.swift */,
+				02BD8F791BB2084500637DED /* ViewController.swift */,
+				02BD8F7B1BB2084500637DED /* Main.storyboard */,
+				02BD8F7E1BB2084500637DED /* Assets.xcassets */,
+				02BD8F801BB2084500637DED /* LaunchScreen.storyboard */,
+				02BD8F831BB2084500637DED /* Info.plist */,
+			);
+			path = alexhinkle;
+			sourceTree = "<group>";
+		};
+		02BD8F8B1BB2084500637DED /* alexhinkleTests */ = {
+			isa = PBXGroup;
+			children = (
+				02BD8F8C1BB2084500637DED /* alexhinkleTests.swift */,
+				02BD8F8E1BB2084500637DED /* Info.plist */,
+			);
+			path = alexhinkleTests;
+			sourceTree = "<group>";
+		};
+		02BD8F961BB2084500637DED /* alexhinkleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				02BD8F971BB2084500637DED /* alexhinkleUITests.swift */,
+				02BD8F991BB2084500637DED /* Info.plist */,
+			);
+			path = alexhinkleUITests;
+			sourceTree = "<group>";
+		};
+		02BD8FA01BB2084500637DED /* alexhinkle WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				02BD8FA11BB2084500637DED /* Interface.storyboard */,
+				02BD8FA41BB2084500637DED /* Assets.xcassets */,
+				02BD8FA61BB2084500637DED /* Info.plist */,
+			);
+			path = "alexhinkle WatchKit App";
+			sourceTree = "<group>";
+		};
+		02BD8FAF1BB2084500637DED /* alexhinkle WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02BD8FB21BB2084500637DED /* InterfaceController.swift */,
+				02BD8FB41BB2084500637DED /* ExtensionDelegate.swift */,
+				02BD8FB61BB2084500637DED /* NotificationController.swift */,
+				02BD8FB81BB2084500637DED /* Assets.xcassets */,
+				02BD8FBA1BB2084500637DED /* Info.plist */,
+				02BD8FB01BB2084500637DED /* Supporting Files */,
+			);
+			path = "alexhinkle WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		02BD8FB01BB2084500637DED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02BD8FB11BB2084500637DED /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02BD8F731BB2084500637DED /* alexhinkle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BD8FC51BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkle" */;
+			buildPhases = (
+				02BD8F701BB2084500637DED /* Sources */,
+				02BD8F711BB2084500637DED /* Frameworks */,
+				02BD8F721BB2084500637DED /* Resources */,
+				02BD8FC41BB2084500637DED /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02BD8F9F1BB2084500637DED /* PBXTargetDependency */,
+			);
+			name = alexhinkle;
+			productName = alexhinkle;
+			productReference = 02BD8F741BB2084500637DED /* alexhinkle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		02BD8F871BB2084500637DED /* alexhinkleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BD8FC81BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkleTests" */;
+			buildPhases = (
+				02BD8F841BB2084500637DED /* Sources */,
+				02BD8F851BB2084500637DED /* Frameworks */,
+				02BD8F861BB2084500637DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02BD8F8A1BB2084500637DED /* PBXTargetDependency */,
+			);
+			name = alexhinkleTests;
+			productName = alexhinkleTests;
+			productReference = 02BD8F881BB2084500637DED /* alexhinkleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		02BD8F921BB2084500637DED /* alexhinkleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BD8FCB1BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkleUITests" */;
+			buildPhases = (
+				02BD8F8F1BB2084500637DED /* Sources */,
+				02BD8F901BB2084500637DED /* Frameworks */,
+				02BD8F911BB2084500637DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02BD8F951BB2084500637DED /* PBXTargetDependency */,
+			);
+			name = alexhinkleUITests;
+			productName = alexhinkleUITests;
+			productReference = 02BD8F931BB2084500637DED /* alexhinkleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		02BD8F9B1BB2084500637DED /* alexhinkle WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BD8FC11BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkle WatchKit App" */;
+			buildPhases = (
+				02BD8F9A1BB2084500637DED /* Resources */,
+				02BD8FC01BB2084500637DED /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02BD8FAE1BB2084500637DED /* PBXTargetDependency */,
+			);
+			name = "alexhinkle WatchKit App";
+			productName = "alexhinkle WatchKit App";
+			productReference = 02BD8F9C1BB2084500637DED /* alexhinkle WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		02BD8FAA1BB2084500637DED /* alexhinkle WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BD8FBD1BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkle WatchKit Extension" */;
+			buildPhases = (
+				02BD8FA71BB2084500637DED /* Sources */,
+				02BD8FA81BB2084500637DED /* Frameworks */,
+				02BD8FA91BB2084500637DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "alexhinkle WatchKit Extension";
+			productName = "alexhinkle WatchKit Extension";
+			productReference = 02BD8FAB1BB2084500637DED /* alexhinkle WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02BD8F6C1BB2084500637DED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Alex Hinkle";
+				TargetAttributes = {
+					02BD8F731BB2084500637DED = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					02BD8F871BB2084500637DED = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 02BD8F731BB2084500637DED;
+					};
+					02BD8F921BB2084500637DED = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 02BD8F731BB2084500637DED;
+					};
+					02BD8F9B1BB2084500637DED = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					02BD8FAA1BB2084500637DED = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 02BD8F6F1BB2084500637DED /* Build configuration list for PBXProject "alexhinkle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02BD8F6B1BB2084500637DED;
+			productRefGroup = 02BD8F751BB2084500637DED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02BD8F731BB2084500637DED /* alexhinkle */,
+				02BD8F871BB2084500637DED /* alexhinkleTests */,
+				02BD8F921BB2084500637DED /* alexhinkleUITests */,
+				02BD8F9B1BB2084500637DED /* alexhinkle WatchKit App */,
+				02BD8FAA1BB2084500637DED /* alexhinkle WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02BD8F721BB2084500637DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BD8F821BB2084500637DED /* LaunchScreen.storyboard in Resources */,
+				02BD8F7F1BB2084500637DED /* Assets.xcassets in Resources */,
+				02BD8F7D1BB2084500637DED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8F861BB2084500637DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8F911BB2084500637DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8F9A1BB2084500637DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BD8FA51BB2084500637DED /* Assets.xcassets in Resources */,
+				02BD8FA31BB2084500637DED /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8FA91BB2084500637DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BD8FB91BB2084500637DED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02BD8F701BB2084500637DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BD8F7A1BB2084500637DED /* ViewController.swift in Sources */,
+				02BD8F781BB2084500637DED /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8F841BB2084500637DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BD8F8D1BB2084500637DED /* alexhinkleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8F8F1BB2084500637DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BD8F981BB2084500637DED /* alexhinkleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BD8FA71BB2084500637DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BD8FB71BB2084500637DED /* NotificationController.swift in Sources */,
+				02BD8FB51BB2084500637DED /* ExtensionDelegate.swift in Sources */,
+				02BD8FB31BB2084500637DED /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02BD8F8A1BB2084500637DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02BD8F731BB2084500637DED /* alexhinkle */;
+			targetProxy = 02BD8F891BB2084500637DED /* PBXContainerItemProxy */;
+		};
+		02BD8F951BB2084500637DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02BD8F731BB2084500637DED /* alexhinkle */;
+			targetProxy = 02BD8F941BB2084500637DED /* PBXContainerItemProxy */;
+		};
+		02BD8F9F1BB2084500637DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02BD8F9B1BB2084500637DED /* alexhinkle WatchKit App */;
+			targetProxy = 02BD8F9E1BB2084500637DED /* PBXContainerItemProxy */;
+		};
+		02BD8FAE1BB2084500637DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02BD8FAA1BB2084500637DED /* alexhinkle WatchKit Extension */;
+			targetProxy = 02BD8FAD1BB2084500637DED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		02BD8F7B1BB2084500637DED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02BD8F7C1BB2084500637DED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02BD8F801BB2084500637DED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02BD8F811BB2084500637DED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		02BD8FA11BB2084500637DED /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02BD8FA21BB2084500637DED /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02BD8FBB1BB2084500637DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		02BD8FBC1BB2084500637DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02BD8FBE1BB2084500637DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "alexhinkle WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkle.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		02BD8FBF1BB2084500637DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "alexhinkle WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkle.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		02BD8FC21BB2084500637DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = alexhinkle_WatchKit_Extension;
+				INFOPLIST_FILE = "alexhinkle WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkle.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		02BD8FC31BB2084500637DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = alexhinkle_WatchKit_Extension;
+				INFOPLIST_FILE = "alexhinkle WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkle.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		02BD8FC61BB2084500637DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = alexhinkle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		02BD8FC71BB2084500637DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = alexhinkle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		02BD8FC91BB2084500637DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = alexhinkleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alexhinkle.app/alexhinkle";
+			};
+			name = Debug;
+		};
+		02BD8FCA1BB2084500637DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = alexhinkleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alexhinkle.app/alexhinkle";
+			};
+			name = Release;
+		};
+		02BD8FCC1BB2084500637DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = alexhinkleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = alexhinkle;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		02BD8FCD1BB2084500637DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = alexhinkleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexhinkle.alexhinkleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = alexhinkle;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02BD8F6F1BB2084500637DED /* Build configuration list for PBXProject "alexhinkle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BD8FBB1BB2084500637DED /* Debug */,
+				02BD8FBC1BB2084500637DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02BD8FBD1BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkle WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BD8FBE1BB2084500637DED /* Debug */,
+				02BD8FBF1BB2084500637DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		02BD8FC11BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkle WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BD8FC21BB2084500637DED /* Debug */,
+				02BD8FC31BB2084500637DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		02BD8FC51BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BD8FC61BB2084500637DED /* Debug */,
+				02BD8FC71BB2084500637DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		02BD8FC81BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BD8FC91BB2084500637DED /* Debug */,
+				02BD8FCA1BB2084500637DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		02BD8FCB1BB2084500637DED /* Build configuration list for PBXNativeTarget "alexhinkleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BD8FCC1BB2084500637DED /* Debug */,
+				02BD8FCD1BB2084500637DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02BD8F6C1BB2084500637DED /* Project object */;
+}
