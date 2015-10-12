@@ -15,13 +15,27 @@ class MainScreenIC: WKInterfaceController
     let alert = WKAlertAction(title: "Ok", style: WKAlertActionStyle.Cancel, handler: { () -> Void in
     })
     let sides = [4,6,8,10,12,20,100]
-    let prefs = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet var theTable: WKInterfaceTable!
 
     override func awakeWithContext(context: AnyObject?)
     {
         super.awakeWithContext(context)
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        let theDiceStrings = prefs.valueForKey("theDiceStrings")
+        if(theDiceStrings != nil)
+        {
+            let vals = theDiceStrings as! NSArray
+            for s in vals
+            {
+                DiceRollerMain.theRolls.append(Roll(rollString: s as! String))
+            }
+            self.generateTable()
+        }
+        
+        
+
         
         
         // Configure interface objects here.
@@ -48,36 +62,33 @@ class MainScreenIC: WKInterfaceController
         }
     }
 
-    @IBAction func SaveClicked()
-    {
-        let pastRoll = prefs.valueForKey("DiceRollerMain.theRolls[i].numSides")
-        
-        
-        print(pastRoll)
-        if(pastRoll != nil)
-        {
-            prefs.setObject(DiceRollerMain.numSides, forKey: "DiceRollerMain.theRolls[i].numSides")
-            prefs.setObject(DiceRollerMain.numDice, forKey: "DiceRollerMain.theRolls[i].qty")
-            prefs.synchronize()
-            
-        }
-        else
-        {
-            prefs.setObject(DiceRollerMain.numSides, forKey: "DiceRollerMain.theRolls[i].numSides")
-            prefs.setObject(DiceRollerMain.numDice, forKey: "DiceRollerMain.theRolls[i].qty")
-        }
-        
-
-    }
+   
 
     override func willActivate() {
+        
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         if(DiceRollerMain.hasDice)
         {
             DiceRollerMain.theRolls.append(Roll(qty: DiceRollerMain.numDice, numSides: DiceRollerMain.numSides))
             DiceRollerMain.resetValues()
+            
+            var theDiceStrings = [String]()
+            for(var i = 0; i < DiceRollerMain.theRolls.count; i++)
+            {
+                theDiceStrings.append(DiceRollerMain.theRolls[i].toString())
+                
+            }
+            
+            let prefs = NSUserDefaults.standardUserDefaults()
+            prefs.setObject(theDiceStrings, forKey: "theDiceStrings")
+            
+            
+            
             self.generateTable()
+            
+            
+            
             
         }
        

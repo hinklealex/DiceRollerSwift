@@ -19,4 +19,16 @@ class Roll: NSObject
         self.numSides = numSides
     }
     
+    init(rollString: String)
+    {
+        let parts = rollString.componentsSeparatedByString(":")
+        self.qty = Int(parts[0])!
+        self.numSides = Int(parts[1])!
+    }
+    
+    func toString() -> String
+    {
+        return "\(qty):\(numSides)"
+    }
+    
 }
