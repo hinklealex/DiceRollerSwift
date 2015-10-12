@@ -26,7 +26,7 @@ class QuanitySelectScreenIC: WKInterfaceController {
         }
         
         self.thePicker.setItems(thePickerItems)
-        
+        print(thePickerItems)
 
         
        

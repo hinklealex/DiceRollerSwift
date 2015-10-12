@@ -22,10 +22,11 @@ class MainScreenIC: WKInterfaceController
     override func awakeWithContext(context: AnyObject?)
     {
         super.awakeWithContext(context)
-        
+        print(1)
         
         // Configure interface objects here.
     }
+    
     
     func generateTable()
     {

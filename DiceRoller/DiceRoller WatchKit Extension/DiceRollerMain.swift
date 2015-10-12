@@ -22,5 +22,6 @@ class DiceRollerMain: NSObject
         numDice = 1
         hasDice = false
     }
+    print(1)
     
 }
