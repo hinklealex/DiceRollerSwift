@@ -18,5 +18,5 @@ class Roll: NSObject
         self.qty = qty
         self.numSides = numSides
     }
-    print(1)
+    
 }

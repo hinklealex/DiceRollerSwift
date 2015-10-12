@@ -22,7 +22,7 @@ class MainScreenIC: WKInterfaceController
     override func awakeWithContext(context: AnyObject?)
     {
         super.awakeWithContext(context)
-        print(1)
+        
         
         // Configure interface objects here.
     }
@@ -50,7 +50,24 @@ class MainScreenIC: WKInterfaceController
 
     @IBAction func SaveClicked()
     {
+        let pastRoll = prefs.valueForKey("DiceRollerMain.theRolls[i].numSides")
         
+        
+        print(pastRoll)
+        if(pastRoll != nil)
+        {
+            prefs.setObject(DiceRollerMain.numSides, forKey: "DiceRollerMain.theRolls[i].numSides")
+            prefs.setObject(DiceRollerMain.numDice, forKey: "DiceRollerMain.theRolls[i].qty")
+            prefs.synchronize()
+            
+        }
+        else
+        {
+            prefs.setObject(DiceRollerMain.numSides, forKey: "DiceRollerMain.theRolls[i].numSides")
+            prefs.setObject(DiceRollerMain.numDice, forKey: "DiceRollerMain.theRolls[i].qty")
+        }
+        
+
     }
 
     override func willActivate() {
@@ -63,28 +80,7 @@ class MainScreenIC: WKInterfaceController
             self.generateTable()
             
         }
-        let currCount = prefs.valueForKey("count")
-        prefs.valueForKey("DiceRollerMain.TheRolls[i].numSides") as! String?
-        print(currCount)
-        if(currCount !=  nil)
-        {
-            prefs.setInteger(currCount! as! Int + 1, forKey: "count")
-           
-            self.theTable.setNumberOfRows(DiceRollerMain.theRolls.count, withRowType: "cell")
-            for( var i = 0; i < DiceRollerMain.theRolls.count; i++)
-            {
-                let currRow = self.theTable.rowControllerAtIndex(i) as! rollRow
-                currRow.qtyLabel.setText("\(DiceRollerMain.theRolls[i].qty)")
-                currRow.sidesLabel.setText("D"+"\(DiceRollerMain.theRolls[i].numSides)")
-            }
-            
-            
-        }
-        else
-        {
-            prefs.setInteger(0, forKey: "count")
-        }
-
+       
     
     }
 

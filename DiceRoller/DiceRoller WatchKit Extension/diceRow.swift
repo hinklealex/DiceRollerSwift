@@ -13,5 +13,5 @@ class diceRow: NSObject
 
     @IBOutlet var theImage: WKInterfaceImage!
     @IBOutlet var theLabel: WKInterfaceLabel!
-    print(1)
+    
 }

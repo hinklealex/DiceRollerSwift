@@ -15,7 +15,7 @@ class DiceSelectIC: WKInterfaceController {
     let sides = [4,6,8,10,12,10,100]
     
     @IBOutlet var theTable: WKInterfaceTable!
-    print(1)
+    
 
 
 
