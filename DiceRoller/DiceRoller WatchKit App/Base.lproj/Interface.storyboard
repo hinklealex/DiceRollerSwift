@@ -140,15 +140,9 @@
                             <items>
                                 <group width="1" alignment="left" id="7XW-rv-dM8">
                                     <items>
-                                        <button width="57" alignment="left" title="Add" id="a1m-Sj-5dL">
+                                        <button width="135" alignment="left" title="Add" id="a1m-Sj-5dL">
                                             <connections>
-                                                <action selector="AddButtonClicked" destination="il8-fx-HkH" id="jZi-7Z-mGz"/>
-                                                <segue destination="cDO-Tx-jd4" kind="push" id="EGd-Sw-qV8"/>
-                                            </connections>
-                                        </button>
-                                        <button width="63" height="39.5" alignment="right" title="Save" id="wr6-Zh-DOP">
-                                            <connections>
-                                                <action selector="SaveClicked" destination="il8-fx-HkH" id="v5E-Ht-BXl"/>
+                                                <segue destination="cDO-Tx-jd4" kind="push" id="iFp-6U-YdC"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -156,13 +150,19 @@
                                 <table alignment="left" id="mfn-vc-FGd">
                                     <items>
                                         <tableRow identifier="cell" id="iGa-Ya-eHt" customClass="rollRow" customModule="DiceRoller_WatchKit_Extension">
-                                            <group key="rootItem" width="1" alignment="left" id="GsF-3n-aLW">
+                                            <group key="rootItem" width="1" alignment="left" layout="vertical" id="GsF-3n-aLW">
                                                 <items>
-                                                    <label width="0.5" height="1" alignment="left" text="4" id="TjD-W2-RcL"/>
-                                                    <label width="0.5" height="1" alignment="left" text="D6" id="ZpO-Dq-jDZ"/>
+                                                    <group width="1" alignment="left" id="wEJ-ZA-XOC">
+                                                        <items>
+                                                            <label width="0.5" height="1" alignment="left" text="4" id="TjD-W2-RcL"/>
+                                                            <label width="0.5" height="1" alignment="left" text="D6" id="ZpO-Dq-jDZ"/>
+                                                        </items>
+                                                    </group>
+                                                    <label width="1" alignment="left" text="Name" textAlignment="center" id="6Bl-yQ-1s7"/>
                                                 </items>
                                             </group>
                                             <connections>
+                                                <outlet property="nameLabel" destination="6Bl-yQ-1s7" id="prF-R1-Ku5"/>
                                                 <outlet property="qtyLabel" destination="TjD-W2-RcL" id="SYP-7G-34t"/>
                                                 <outlet property="sidesLabel" destination="ZpO-Dq-jDZ" id="xle-1X-kLg"/>
                                             </connections>
@@ -177,7 +177,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="54" y="579.75"/>
+            <point key="canvasLocation" x="-38" y="572"/>
         </scene>
         <!--DiceSelectScreenIC-->
         <scene sceneID="lXE-kt-KnI">
@@ -211,7 +211,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219" y="579"/>
+            <point key="canvasLocation" x="112" y="579"/>
         </scene>
         <!--QuantitySelectScreenIC-->
         <scene sceneID="VPH-MZ-FPC">
@@ -228,9 +228,9 @@
                                 </picker>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Add Roll" id="4Zr-QT-Tgx">
+                        <button width="1" alignment="left" title="Select Name" id="4Zr-QT-Tgx">
                             <connections>
-                                <action selector="addRollButtonPressed" destination="Wzm-pm-odr" id="dAU-cy-Ess"/>
+                                <action selector="selectNameButtonPressed" destination="Wzm-pm-odr" id="xcc-Qr-SQs"/>
                             </connections>
                         </button>
                     </items>
@@ -239,7 +239,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="380" y="579"/>
+            <point key="canvasLocation" x="272" y="579"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

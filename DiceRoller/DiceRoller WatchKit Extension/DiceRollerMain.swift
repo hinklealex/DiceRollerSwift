@@ -12,6 +12,7 @@ class DiceRollerMain: NSObject
 {
     static var numSides = 0
     static var numDice = 1
+    static var currName = ""
     static var theRolls = [Roll]()
     static var hasDice = false
     
@@ -20,7 +21,9 @@ class DiceRollerMain: NSObject
     {
         numSides = 0
         numDice = 1
+         currName = ""
         hasDice = false
+       
     }
     
     

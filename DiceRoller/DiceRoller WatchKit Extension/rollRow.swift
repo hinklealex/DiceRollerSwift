@@ -12,5 +12,6 @@ class rollRow: NSObject
 {
     @IBOutlet var sidesLabel: WKInterfaceLabel!
     @IBOutlet var qtyLabel: WKInterfaceLabel!
+    @IBOutlet var nameLabel: WKInterfaceLabel!
    
 }

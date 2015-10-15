@@ -35,10 +35,15 @@ class QuanitySelectScreenIC: WKInterfaceController {
     {
         DiceRollerMain.numDice = value + 1
     }
-    @IBAction func addRollButtonPressed()
+    @IBAction func selectNameButtonPressed()
     {
-        DiceRollerMain.hasDice = true
-        self.popToRootController()
+        let suggestions = ["attack","intiative","damage"]
+        self.presentTextInputControllerWithSuggestions(suggestions , allowedInputMode: WKTextInputMode.Plain) { (vals) -> Void in
+            DiceRollerMain.currName = vals![0] as! String
+            DiceRollerMain.hasDice = true
+            self.popToRootController()
+        }
+       
         
     }
 

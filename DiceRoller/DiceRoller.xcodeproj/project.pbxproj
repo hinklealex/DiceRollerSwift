@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02120BE21BCEEC630007BF2C /* interface.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02120BE11BCEEC630007BF2C /* interface.Storyboard */; settings = {ASSET_TAGS = (); }; };
 		022A1C551BB5D9360050967A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1C541BB5D9360050967A /* AppDelegate.swift */; };
 		022A1C571BB5D9360050967A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1C561BB5D9360050967A /* ViewController.swift */; };
 		022A1C5A1BB5D9360050967A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022A1C581BB5D9360050967A /* Main.storyboard */; };
 		022A1C5C1BB5D9360050967A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022A1C5B1BB5D9360050967A /* Assets.xcassets */; };
 		022A1C5F1BB5D9360050967A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022A1C5D1BB5D9360050967A /* LaunchScreen.storyboard */; };
 		022A1C641BB5D9360050967A /* DiceRoller WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 022A1C631BB5D9360050967A /* DiceRoller WatchKit App.app */; };
-		022A1C6A1BB5D9360050967A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022A1C681BB5D9360050967A /* Interface.storyboard */; };
 		022A1C6C1BB5D9360050967A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022A1C6B1BB5D9360050967A /* Assets.xcassets */; };
 		022A1C731BB5D9360050967A /* DiceRoller WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 022A1C721BB5D9360050967A /* DiceRoller WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		022A1C7A1BB5D9360050967A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1C791BB5D9360050967A /* InterfaceController.swift */; };
@@ -81,6 +81,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02120BE11BCEEC630007BF2C /* interface.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = interface.Storyboard; path = "../DiceRoller WatchKit Extension/interface.Storyboard"; sourceTree = "<group>"; };
 		022A1C511BB5D9360050967A /* DiceRoller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		022A1C541BB5D9360050967A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		022A1C561BB5D9360050967A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		022A1C5E1BB5D9360050967A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		022A1C601BB5D9360050967A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		022A1C631BB5D9360050967A /* DiceRoller WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DiceRoller WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		022A1C691BB5D9360050967A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		022A1C6B1BB5D9360050967A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		022A1C6D1BB5D9360050967A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		022A1C721BB5D9360050967A /* DiceRoller WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DiceRoller WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,8 +175,8 @@
 		022A1C671BB5D9360050967A /* DiceRoller WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				02120BE11BCEEC630007BF2C /* interface.Storyboard */,
 				022A1CD61BB9CD690050967A /* Images */,
-				022A1C681BB5D9360050967A /* Interface.storyboard */,
 				022A1C6B1BB5D9360050967A /* Assets.xcassets */,
 				022A1C6D1BB5D9360050967A /* Info.plist */,
 			);
@@ -381,7 +381,6 @@
 				022A1CEA1BBC6C810050967A /* d100.jpg in Resources */,
 				022A1C6C1BB5D9360050967A /* Assets.xcassets in Resources */,
 				022A1CE91BBC6C810050967A /* d12.jpg in Resources */,
-				022A1C6A1BB5D9360050967A /* Interface.storyboard in Resources */,
 				022A1CE21BB9D3800050967A /* d8.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02120BE21BCEEC630007BF2C /* interface.Storyboard in Resources */,
 				022A1C801BB5D9370050967A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,14 +455,6 @@
 				022A1C5E1BB5D9360050967A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		022A1C681BB5D9360050967A /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				022A1C691BB5D9360050967A /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -18,6 +18,7 @@ class MainScreenIC: WKInterfaceController
     
     @IBOutlet var theTable: WKInterfaceTable!
 
+         
     override func awakeWithContext(context: AnyObject?)
     {
         super.awakeWithContext(context)
@@ -50,6 +51,7 @@ class MainScreenIC: WKInterfaceController
             let currRow = self.theTable.rowControllerAtIndex(i) as! rollRow
             currRow.qtyLabel.setText("\(DiceRollerMain.theRolls[i].qty)")
             currRow.sidesLabel.setText("D"+"\(DiceRollerMain.theRolls[i].numSides)")
+            currRow.nameLabel.setText("Name: \(DiceRollerMain.theRolls[i].name)")
         }
 
     }
@@ -70,7 +72,7 @@ class MainScreenIC: WKInterfaceController
         super.willActivate()
         if(DiceRollerMain.hasDice)
         {
-            DiceRollerMain.theRolls.append(Roll(qty: DiceRollerMain.numDice, numSides: DiceRollerMain.numSides))
+            DiceRollerMain.theRolls.append(Roll(qty: DiceRollerMain.numDice, numSides: DiceRollerMain.numSides, name: DiceRollerMain.currName))
             DiceRollerMain.resetValues()
             
             var theDiceStrings = [String]()
