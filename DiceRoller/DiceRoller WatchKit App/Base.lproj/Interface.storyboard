@@ -136,7 +136,7 @@
             <objects>
                 <controller identifier="MainSelectScreen" hidesWhenLoading="NO" id="il8-fx-HkH" customClass="MainScreenIC" customModule="DiceRoller_WatchKit_Extension">
                     <items>
-                        <group width="1" height="137" alignment="left" layout="vertical" id="HHw-X0-sLd">
+                        <group width="1" alignment="left" layout="vertical" id="HHw-X0-sLd">
                             <items>
                                 <group width="1" alignment="left" id="7XW-rv-dM8">
                                     <items>
@@ -147,37 +147,58 @@
                                         </button>
                                     </items>
                                 </group>
-                                <table alignment="left" id="mfn-vc-FGd">
-                                    <items>
-                                        <tableRow identifier="cell" id="iGa-Ya-eHt" customClass="rollRow" customModule="DiceRoller_WatchKit_Extension">
-                                            <group key="rootItem" width="1" alignment="left" layout="vertical" id="GsF-3n-aLW">
-                                                <items>
-                                                    <group width="1" alignment="left" id="wEJ-ZA-XOC">
-                                                        <items>
-                                                            <label width="0.5" height="1" alignment="left" text="4" id="TjD-W2-RcL"/>
-                                                            <label width="0.5" height="1" alignment="left" text="D6" id="ZpO-Dq-jDZ"/>
-                                                        </items>
-                                                    </group>
-                                                    <label width="1" alignment="left" text="Name" textAlignment="center" id="6Bl-yQ-1s7"/>
-                                                </items>
-                                            </group>
-                                            <connections>
-                                                <outlet property="nameLabel" destination="6Bl-yQ-1s7" id="prF-R1-Ku5"/>
-                                                <outlet property="qtyLabel" destination="TjD-W2-RcL" id="SYP-7G-34t"/>
-                                                <outlet property="sidesLabel" destination="ZpO-Dq-jDZ" id="xle-1X-kLg"/>
-                                            </connections>
-                                        </tableRow>
-                                    </items>
-                                </table>
                             </items>
                         </group>
+                        <label width="1" alignment="center" text="Mode: Roll" textAlignment="center" id="XOO-RS-MNh"/>
+                        <table alignment="left" id="mfn-vc-FGd">
+                            <items>
+                                <tableRow identifier="cell" id="iGa-Ya-eHt" customClass="rollRow" customModule="DiceRoller_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="GsF-3n-aLW">
+                                        <items>
+                                            <group width="1" alignment="left" id="wEJ-ZA-XOC">
+                                                <items>
+                                                    <label width="0.5" height="1" alignment="left" text="4" id="TjD-W2-RcL"/>
+                                                    <label width="0.5" height="1" alignment="left" text="D6" id="ZpO-Dq-jDZ"/>
+                                                </items>
+                                            </group>
+                                            <label width="1" alignment="left" text="Name" textAlignment="center" id="6Bl-yQ-1s7"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="6Bl-yQ-1s7" id="prF-R1-Ku5"/>
+                                        <outlet property="qtyLabel" destination="TjD-W2-RcL" id="SYP-7G-34t"/>
+                                        <outlet property="sidesLabel" destination="ZpO-Dq-jDZ" id="xle-1X-kLg"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
+                    <menu key="menu" id="ycR-Nc-4Qe">
+                        <items>
+                            <menuItem title="Roll" icon="play" id="eu1-AX-mAU">
+                                <connections>
+                                    <action selector="rollContextButtonPressed" destination="il8-fx-HkH" id="1cR-B5-sc1"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Edit" icon="more" id="as6-Sb-ciE">
+                                <connections>
+                                    <action selector="editContextButtonPressed" destination="il8-fx-HkH" id="5wO-it-emw"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" icon="trash" id="pkb-aL-5da">
+                                <connections>
+                                    <action selector="deleteContextButtonPressed" destination="il8-fx-HkH" id="nz4-G1-GXI"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
+                        <outlet property="theModeLabel" destination="XOO-RS-MNh" id="kCj-Up-DpA"/>
                         <outlet property="theTable" destination="mfn-vc-FGd" id="8Rt-JO-uZc"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-38" y="572"/>
+            <point key="canvasLocation" x="-37" y="579"/>
         </scene>
         <!--DiceSelectScreenIC-->
         <scene sceneID="lXE-kt-KnI">

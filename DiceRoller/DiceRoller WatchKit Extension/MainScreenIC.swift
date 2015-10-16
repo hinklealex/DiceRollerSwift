@@ -12,12 +12,28 @@ import Foundation
 
 class MainScreenIC: WKInterfaceController
 {
-    let alert = WKAlertAction(title: "Ok", style: WKAlertActionStyle.Cancel, handler: { () -> Void in
+    let rollAlert = WKAlertAction(title: "Ok", style: WKAlertActionStyle.Cancel, handler: { () -> Void in
     })
+    let deleteAlertCancel = WKAlertAction(title: "Cancel", style: WKAlertActionStyle.Cancel, handler: { () -> Void in print("cancel Delete")
+    })
+    let deleteAlertConfrim = WKAlertAction(title: "Confirm", style: WKAlertActionStyle.Cancel, handler: { () -> Void in
+        
+        //Delete from rolls 
+       // DiceRollerMain.theRolls.removeAtIndex(???)
+        //self.updateUserDefults()
+        //self.generateTable()
+        
+    })
+    
+    
+    
     let sides = [4,6,8,10,12,20,100]
     
     @IBOutlet var theTable: WKInterfaceTable!
 
+    @IBOutlet var theModeLabel: WKInterfaceLabel!
+    
+    var currMode = "Roll"
          
     override func awakeWithContext(context: AnyObject?)
     {
@@ -41,7 +57,27 @@ class MainScreenIC: WKInterfaceController
         
         // Configure interface objects here.
     }
+    //Context menu actions
+    func updateModeLabel()
+    {
+        self.theModeLabel.setText("Mode: \(self.currMode)")
+    }
     
+    @IBAction func rollContextButtonPressed()
+    {
+        self.currMode = "Roll"
+        self.updateModeLabel()
+    }
+    @IBAction func editContextButtonPressed()
+    {
+        self.currMode = "Edit"
+        self.updateModeLabel()
+    }
+    @IBAction func deleteContextButtonPressed()
+    {
+       self.currMode = "Delete"
+        self.updateModeLabel()
+    }
     
     func generateTable()
     {
@@ -58,10 +94,32 @@ class MainScreenIC: WKInterfaceController
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int)
     {
-        for(var i = 0; i <= DiceRollerMain.numDice; i++)
+        if(currMode == "Roll")
         {
-        self.presentAlertControllerWithTitle("The Roll", message: "\(rand()%Int32(self.sides[rowIndex]+1))", preferredStyle: WKAlertControllerStyle.Alert, actions: [alert])
+            self.presentAlertControllerWithTitle("The Roll", message: DiceRollerMain.theRolls[rowIndex].roll(), preferredStyle: WKAlertControllerStyle.Alert, actions: [rollAlert])
         }
+        else if(currMode == "Edit")
+        {
+                        self.presentAlertControllerWithTitle("The Roll", message: "Edit", preferredStyle: WKAlertControllerStyle.Alert, actions: [rollAlert])
+        }
+        else if(currMode == "Delete")
+        {
+                        self.presentAlertControllerWithTitle("** Delete **", message: "Confirm Delete?", preferredStyle: WKAlertControllerStyle.Alert, actions: [deleteAlertConfrim, deleteAlertCancel])
+        }
+        
+    }
+    
+    func updateUserDefults()
+    {
+        var theDiceStrings = [String]()
+        for(var i = 0; i < DiceRollerMain.theRolls.count; i++)
+        {
+            theDiceStrings.append(DiceRollerMain.theRolls[i].toString())
+            
+        }
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        prefs.setObject(theDiceStrings, forKey: "theDiceStrings")
     }
 
    
@@ -75,15 +133,8 @@ class MainScreenIC: WKInterfaceController
             DiceRollerMain.theRolls.append(Roll(qty: DiceRollerMain.numDice, numSides: DiceRollerMain.numSides, name: DiceRollerMain.currName))
             DiceRollerMain.resetValues()
             
-            var theDiceStrings = [String]()
-            for(var i = 0; i < DiceRollerMain.theRolls.count; i++)
-            {
-                theDiceStrings.append(DiceRollerMain.theRolls[i].toString())
-                
-            }
-            
-            let prefs = NSUserDefaults.standardUserDefaults()
-            prefs.setObject(theDiceStrings, forKey: "theDiceStrings")
+           //update user defluts
+            self.updateUserDefults()
             
             
             

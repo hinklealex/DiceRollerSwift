@@ -42,4 +42,20 @@ class Roll: NSObject
         return "\(qty):\(numSides):\(name)"
     }
     
+    func roll() -> String
+    {
+        var answer = ""
+        var total = 0
+        
+        for(var i = 0; i < self.qty; i++)
+        {
+            let currRoll = Int(rand()) % self.numSides + 1
+            answer = "\(answer)\(currRoll) "
+            total += currRoll
+            
+        }
+        answer = "\(answer)] -> \(total)"
+        return answer
+    }
+    
 }
