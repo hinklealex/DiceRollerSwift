@@ -114,6 +114,9 @@ class MainScreenIC: WKInterfaceController
         {
             DiceRollerMain.theRolls.removeAtIndex(rowIndex)
             self.pushControllerWithName("DiceSelectScreenIC", context: "")
+            DiceRollerMain.theRolls[rowIndex].qty = DiceRollerMain.theRolls[rowIndex].qty
+            DiceRollerMain.theRolls[rowIndex].numSides = DiceRollerMain.theRolls[rowIndex].numSides
+            DiceRollerMain.theRolls[rowIndex].name = DiceRollerMain.theRolls[rowIndex].name
             
             
         }
