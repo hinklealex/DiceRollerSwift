@@ -16,14 +16,22 @@ class MainScreenIC: WKInterfaceController
     })
     let deleteAlertCancel = WKAlertAction(title: "Cancel", style: WKAlertActionStyle.Cancel, handler: { () -> Void in print("cancel Delete")
     })
+    
     let deleteAlertConfrim = WKAlertAction(title: "Confirm", style: WKAlertActionStyle.Cancel, handler: { () -> Void in
         
-        //Delete from rolls 
-       // DiceRollerMain.theRolls.removeAtIndex(???)
-        //self.updateUserDefults()
-        //self.generateTable()
+        
+        //Delete the current row from theRolls
+            DiceRollerMain.theRolls.removeAtIndex(MainScreenIC.currSelectedIndex)
+          //self.generateTable()
         
     })
+
+    
+    
+    func deleteHelper()
+    {
+        print("Deleting Row: \(MainScreenIC.currSelectedIndex)")
+    }
     
     
     
@@ -34,6 +42,8 @@ class MainScreenIC: WKInterfaceController
     @IBOutlet var theModeLabel: WKInterfaceLabel!
     
     var currMode = "Roll"
+    
+     static var currSelectedIndex = -1
          
     override func awakeWithContext(context: AnyObject?)
     {
@@ -92,28 +102,18 @@ class MainScreenIC: WKInterfaceController
 
     }
     
-    func insertRowsAtIndexes(rows: Int)
-    {
-       
-    }
-    func removeRowsAtIndexes(rows: Int)
-    {
-        
-    }
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int)
     {
+        MainScreenIC.currSelectedIndex = rowIndex
         if(currMode == "Roll")
         {
             self.presentAlertControllerWithTitle("The Roll", message: DiceRollerMain.theRolls[rowIndex].roll(), preferredStyle: WKAlertControllerStyle.Alert, actions: [rollAlert])
         }
         else if(currMode == "Edit")
         {
-            
+            DiceRollerMain.theRolls.removeAtIndex(rowIndex)
             self.pushControllerWithName("DiceSelectScreenIC", context: "")
-            DiceRollerMain.theRolls[rowIndex].qty = DiceRollerMain.theRolls[rowIndex].qty
-            DiceRollerMain.theRolls[rowIndex].numSides = DiceRollerMain.theRolls[rowIndex].numSides
-            DiceRollerMain.theRolls[rowIndex].name = DiceRollerMain.theRolls[rowIndex].name
             
             
         }
@@ -124,7 +124,7 @@ class MainScreenIC: WKInterfaceController
         
     }
     
-    func updateUserDefults()
+    static func updateUserDefults()
     {
         var theDiceStrings = [String]()
         for(var i = 0; i < DiceRollerMain.theRolls.count; i++)
@@ -147,18 +147,16 @@ class MainScreenIC: WKInterfaceController
         {
             DiceRollerMain.theRolls.append(Roll(qty: DiceRollerMain.numDice, numSides: DiceRollerMain.numSides, name: DiceRollerMain.currName))
             DiceRollerMain.resetValues()
-            
-           //update user defluts
-            self.updateUserDefults()
-            
-            
-            
-            self.generateTable()
-            
-            
-            
+           
             
         }
+        
+        //update user defluts
+        MainScreenIC.updateUserDefults()
+        
+        
+        
+        self.generateTable()
        
     
     }
