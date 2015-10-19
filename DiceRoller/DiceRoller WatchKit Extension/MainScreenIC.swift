@@ -94,7 +94,7 @@ class MainScreenIC: WKInterfaceController
     
     func insertRowsAtIndexes(rows: Int)
     {
-        
+       
     }
     func removeRowsAtIndexes(rows: Int)
     {
@@ -109,8 +109,11 @@ class MainScreenIC: WKInterfaceController
         }
         else if(currMode == "Edit")
         {
-            print(rowIndex)
+            
             self.pushControllerWithName("DiceSelectScreenIC", context: "")
+            DiceRollerMain.theRolls[rowIndex].qty = DiceRollerMain.theRolls[rowIndex].qty
+            DiceRollerMain.theRolls[rowIndex].numSides = DiceRollerMain.theRolls[rowIndex].numSides
+            DiceRollerMain.theRolls[rowIndex].name = DiceRollerMain.theRolls[rowIndex].name
             
             
         }
