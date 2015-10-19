@@ -92,6 +92,15 @@ class MainScreenIC: WKInterfaceController
 
     }
     
+    func insertRowsAtIndexes(rows: Int)
+    {
+        
+    }
+    func removeRowsAtIndexes(rows: Int)
+    {
+        
+    }
+    
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int)
     {
         if(currMode == "Roll")
@@ -100,7 +109,10 @@ class MainScreenIC: WKInterfaceController
         }
         else if(currMode == "Edit")
         {
-                        self.presentAlertControllerWithTitle("The Roll", message: "Edit", preferredStyle: WKAlertControllerStyle.Alert, actions: [rollAlert])
+            print(rowIndex)
+            self.pushControllerWithName("DiceSelectScreenIC", context: "")
+            
+            
         }
         else if(currMode == "Delete")
         {
